@@ -1,7 +1,7 @@
 # XiaoXin-13-Pro-Hackintosh  
 关键词：`Hackintosh` `XiaoXin` `EFI` `Tourtil`  
 ## 目录
-* 个人配置  
+* [个人配置](#个人配置)  
 * 准备工具  
 * 操作流程  
 * 参考资料  
