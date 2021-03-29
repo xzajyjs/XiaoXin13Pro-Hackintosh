@@ -1,5 +1,4 @@
 # XiaoXin-13-Pro-Hackintosh  
-小新13Pro黑苹果  
 关键词：`Hackintosh` `XiaoXin` `EFI` `Tourtil`  
     小新13pro自出厂起就被誉为最适合黑苹果的笔记本
 ## 目录
