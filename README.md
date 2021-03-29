@@ -1,7 +1,6 @@
 # XiaoXin-13-Pro-hackintosh-EFI-backup
-    Backup from the one that nomally runned on BigSur 11.0-11.2.3
-
 关键词：`Hackintosh` `XiaoXin` `EFI` `Tourtil`  
+    小新13pro自出厂起就被誉为最适合黑苹果的笔记本
 ## 目录
 * 个人配置  
 * 准备工具  
@@ -18,4 +17,3 @@
 |网卡|~~intel AX201~~ DW1820A|
 |硬盘|SN730(1T)|  
     注：硬盘512G自行更换为同型号1T；AX201无法使用隔空投送、蓝牙，随航，建议更换为DW1820A或1560  
-
