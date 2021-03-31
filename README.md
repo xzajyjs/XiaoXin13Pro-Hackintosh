@@ -1,5 +1,5 @@
 # Lenovo XiaoXin-13-Pro-Hackintosh  
-关键词：`Hackintosh` `XiaoXin` `EFI` `Tourtil` `Lenovo`
+关键词：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`
 ## 目录
 * [个人配置](#个人配置)  
 * [准备工具](#准备工具) 
