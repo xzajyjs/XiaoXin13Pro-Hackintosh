@@ -101,3 +101,9 @@
 4.强烈建议更改三码并关闭“查找此Mac”。  
 5.若无法登陆AppleID和AppStore，尝试第四步后更改DNS为114.114.114.114和8.8.8.8。  
 6.DW1820A的4.1Ghz蓝牙和2.4Ghz无线局域网干扰严重。  
+![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/battery.png)
+![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bluetooth.png)
+![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/general.png)
+![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/gpu.png)
+![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/ssd.png)
+![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/wifi.png)
