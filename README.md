@@ -15,7 +15,7 @@
 |型号|联想小新13Pro2020|
 |CPU|Intel i5-10210U|
 |显卡|~~MX350~~ (独显无法驱动)UHD620|
-|内存|板载16g（3200MHz）|
+|内存|板载16g（2666Mhz）|
 |网卡|~~intel AX201~~ ~~DW1820A~~ DW1560|
 |硬盘|西数SN730(1T)|  
     注:1.硬盘512G自行更换为同型号1T  
@@ -41,7 +41,7 @@
 * 关闭驱动器Bitlocker（如打开的话）。
 * 解锁DMVT和ctglock(**至关重要**)  
 
-		管理员身份运行InsydeH2OUVE文件夹内**H2OUVE-W-GUIx64.exe**, File---load runtime, 修改如下位置的参数并保存重启:
+		管理员身份运行InsydeH2OUVE文件夹内H2OUVE-W-GUIx64.exe, File---load runtime, 修改如下位置的参数并保存重启:
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bios_1.png?raw=true "鼠标指针处修改为02")
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bios_2.png?raw=true)
 * 使用BalenaEtcher刻录MacOS镜像至U盘
