@@ -7,15 +7,15 @@
 	* 准备工作
 	* 安装系统
 	* 完善设置
-* 参考资料  
-* 问题说明    
+* [参考资料](#参考资料)  
+* [问题说明](#问题说明)    
 ## 个人配置  
 |规格|详细信息|
 |:-|:-|
 |型号|联想小新13Pro2020|
 |CPU|Intel i5-10210U|
 |显卡|~~MX350~~ (独显无法驱动)UHD620|
-|内存|板载16g|
+|内存|板载16g（3200MHz）|
 |网卡|~~intel AX201~~ ~~DW1820A~~ DW1560|
 |硬盘|西数SN730(1T)|  
     注:1.硬盘512G自行更换为同型号1T  
@@ -87,3 +87,17 @@
 * 调整启动项顺序
 
 		建议将mac放到首启动项，开机默认进入mac。因为使用OC引导windows会出现一些小问题。因此要进入windows时开机Fn+f12选择win进入为纯净。
+## 参考资料
+* 黑果小兵的部落阁：https://blog.daliansky.net/
+* 小新13Pro适用EFI：https://github.com/daliansky/XiaoXinPro-13-hackintosh/releases  
+	注意：有些EFI不带有1820A的网卡驱动，下载时请注意！添加1820A网卡驱动方式参考[此处](https://blog.daliansky.net/DW1820A_BCM94350ZAE-driver-inserts-the-correct-posture.html),1560参考[此处](https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html)。
+
+	  提供的EFI中已包含1820A和1560通用网卡驱动。此处纠正一个误区，1820A和1560并非免驱，而是现在部分EFI中（小新的绝大多数）已经包含了网卡和蓝牙驱动。
+* B站视频：https://www.bilibili.com/video/BV1ca4y1j7bN
+## 问题说明
+1.该EFI的OC版本（0.63）目前无法解决内置MIC无法使用的问题。  
+2.触摸板偶尔失灵或触摸反馈间断。  
+3.DW1820A对于连接iPhone热点存在同一设备名称仅能连接一次的bug。  
+4.强烈建议更改三码并关闭“查找此Mac”。  
+5.若无法登陆AppleID和AppStore，尝试第四步后更改DNS为114.114.114.114和8.8.8.8。  
+6.DW1820A的4.1Ghz蓝牙和2.4Ghz无线局域网干扰严重。  
