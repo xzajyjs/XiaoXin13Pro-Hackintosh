@@ -26,7 +26,7 @@
        6.经测试，OC0.6.3适配11.0.0-11.2.3
 ## 准备工具  
 1.配置好的EFI(适合此机型的)  
-2.BalenaEtcher-Setup  
+2.BalenaEtcher-Setup（[下载](https://pan.baidu.com/s/11ObMtIKhUBLLy_J3pLN_Pg) 提取码: me8f）  
 3.DiskGenius  
 4.EasyUEFI  
 5.InsydeH2OUVE  
