@@ -26,7 +26,7 @@
        6.经测试，OC0.6.3适配11.0.0-11.2.3
 ## 准备工具  
 1.配置好的EFI(适合此机型的)  
-2.BalenaEtcher-Setup（[下载](https://pan.baidu.com/s/11ObMtIKhUBLLy_J3pLN_Pg) 提取码: me8f）  
+2.BalenaEtcher-Setup（[下载]() 提取码: me8f）  
 3.DiskGenius  
 4.EasyUEFI  
 5.InsydeH2OUVE  
@@ -90,6 +90,9 @@
 		建议将mac放到首启动项，开机默认进入mac。因为使用OC引导windows会出现一些小问题。因此要进入windows时开机Fn+f12选择win进入为纯净。
 ## 参考资料
 * 黑果小兵的部落阁：https://blog.daliansky.net/
+* DW1820A网卡黑苹果使用教程：https://blog.daliansky.net/DW1820A_BCM94350ZAE-driver-inserts-the-correct-posture.html
+* macOS BigSur安装常见问题：https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-BigSur-11.0-installation.html
+* 联想小新PRO 13 19/20 Catalina：https://blog.daliansky.net/Lenovo-Xiaoxin-PRO-13-2019-and-macOS-Catalina-Installation-Tutorial.html
 * 小新13Pro适用EFI：https://github.com/daliansky/XiaoXinPro-13-hackintosh/releases  
 	注意：有些EFI不带有1820A的网卡驱动，下载时请注意！添加1820A网卡驱动方式参考[此处](https://blog.daliansky.net/DW1820A_BCM94350ZAE-driver-inserts-the-correct-posture.html),1560参考[此处](https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html)。
 
