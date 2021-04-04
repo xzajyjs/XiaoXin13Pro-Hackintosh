@@ -46,6 +46,8 @@
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bios_1.png?raw=true "鼠标指针处修改为02")
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bios_2.png?raw=true)
 * 使用BalenaEtcher刻录MacOS镜像至U盘
+
+                刻录过程中如弹出格式化则选择取消
 * 将U盘OC文件夹中的EFI文件夹删除并进行替换（内包含boot和oc两个文件夹）
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/disk.png?raw=true "删除原有的EFI文件夹并完成替换")
 * ~~建立Mac分区并更改分区参数为APFS~~ (可有可无)
