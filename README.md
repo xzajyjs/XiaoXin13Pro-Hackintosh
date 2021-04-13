@@ -1,6 +1,6 @@
 # Lenovo XiaoXin-13-Pro-Hackintosh  
 关键词：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`  
-警告：安装完毕后务必更改config中的序列号和设备码（百度搜索三码修改教程），否则Apple ID永久封禁与作者无关！
+**警告：安装完毕后务必更改config中的序列号和设备码（百度搜索三码修改教程），否则Apple ID永久封禁与作者无关！**
 ## 目录
 * [个人配置](#个人配置)  
 * [准备工具](#准备工具) 
