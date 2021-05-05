@@ -52,7 +52,7 @@
 * 将U盘OC文件夹中的EFI文件夹删除并进行替换（内包含boot和oc两个文件夹）
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/disk.png?raw=true "删除原有的EFI文件夹并完成替换")
 * ~~建立Mac分区并更改分区参数为APFS~~ (可有可无)
-* 将软件安装包放入dates分区
+* 将软件安装包放入DATAS分区
 
 		其中的OCC需要用到以来配置config.list和进行其他设置
 ### 2.安装系统
