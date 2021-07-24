@@ -69,7 +69,7 @@
 * 安装macOS
 ### 3.完善设置
 * 安装DATES中的软件
-* 使用OCC挂载两个分区，并将U盘中EFI文件夹内的OC文件夹拷贝至本地mac分区的EFI文件夹内,注意！千万不能将U盘中的Boot文件夹覆盖掉mac本地的Boot！！！否则会导致windows无法被引导（引导损坏）
+* 使用OCC挂载两个分区，并将U盘中EFI文件夹内的OC文件夹拷贝至本地mac分区的EFI文件夹内, *注意！千万不能将U盘中的Boot文件夹覆盖掉mac本地的Boot！！！否则会导致windows无法被引导（引导损坏）*
 
 		完成后本地mac分区EFI文件夹内应有三个文件夹：Microsoft , Boot , OC  
 * （**切勿**推出U盘）重启，进入mac
