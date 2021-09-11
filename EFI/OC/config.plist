@@ -1323,9 +1323,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookAir9,1</string>
 			<key>SystemSerialNumber</key>
-			<string>FVFC9RZGMNHP</string>
+			<string>000000000000</string>
 			<key>SystemUUID</key>
-			<string>74EC332E-0471-4F84-8FC8-B1744B2B972D</string>
+			<string>00000000-0000-0000-0000-000000000000</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
