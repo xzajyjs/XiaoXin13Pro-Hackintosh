@@ -20,20 +20,20 @@
 |网卡|BCM94352Z(DW1560)|
 |硬盘|西数SN730(1T)|  
     注:1.硬盘512G自行更换为同型号1T  
-       2.原装intel AX201无法使用隔空投送、蓝牙，随航，强烈建议更换为DW1560（EFI已完美适配）
+       2.原装intel AX201无法使用隔空投送、蓝牙，随航，强烈建议更换为DW1560（EFI已内置驱动完美适配）
        3.DW1820A性价比比DW1560高但有较大可能需要屏蔽针脚且容易掉驱动（并且第二次连接同一热点大概率失败），除非经济实在拮据，否则非常不推荐！  
-       4.DW1560可实现功能：随航、接力、隔空投送、Apple Watch解锁
+       4.DW1560可实现功能：随航、接力、隔空投送、Apple Watch解锁(解锁在11.4及以后失效)
        5.核显在Mac下伪装成UHD630 Mobile  
-       6.经测试，OC0.6.3适配11.0.0-11.4(在版本范围内可无痛升级)
+       6.经测试，我提供的OC0.6.3适配11.0.0-11.5.1内任意版本(在版本范围内可无痛升级)，其他版本可自行尝试！
 ## 准备工具  
 1.配置好的EFI(适合此机型的)  
-2.BalenaEtcher-Setup（[下载]() 提取码: me8f）  
+2.BalenaEtcher-Setup（[所有工具点此下载]() 提取码: me8f）  
 3.DiskGenius  
 4.EasyUEFI  
 5.InsydeH2OUVE  
 6.MacOS镜像文件（[下载](https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/)）  
 
-    以下演示使用macOS BigSur 11.0.1 20B50 正式版 with Clover 5126原版镜像[双EFI版][UEFI and MBR]，完全安装后可完美升级至11.2.3,其他镜像版本安装类似。  
+    以下演示使用macOS BigSur 11.0.1 20B50 正式版 with Clover 5126原版镜像[双EFI版][UEFI and MBR]，完全安装后可完美升级至11.5.1,其他镜像版本安装类似。  
 ## 操作流程
 ### 1.准备工作
 * 关闭bios中的安全启动，保存并退出。
@@ -69,7 +69,7 @@
 * 安装macOS
 ### 3.完善设置
 * 安装DATES中的软件
-* 使用OCC挂载两个分区，并将U盘中EFI文件夹内的OC文件夹拷贝至本地mac分区的EFI文件夹内, *注意！千万不能将U盘中的Boot文件夹覆盖掉mac本地的Boot！！！否则会导致windows无法被引导（引导损坏）*
+* 使用OCC挂载两个分区，并将U盘中EFI文件夹内的OC文件夹拷贝至本地mac分区的EFI文件夹内, **注意！千万不能将U盘中的Boot文件夹覆盖掉mac本地的Boot！！！否则会导致windows无法被引导（引导损坏）**
 
 		完成后本地mac分区EFI文件夹内应有三个文件夹：Microsoft , Boot , OC  
 * （**切勿**推出U盘）重启，进入mac
@@ -108,6 +108,7 @@
 4.强烈建议更改三码并关闭“查找此Mac”。  
 5.若无法登陆AppleID和AppStore，尝试第四步后更改DNS为114.114.114.114和8.8.8.8。  
 6.DW1820A的4.1Ghz蓝牙和2.4Ghz无线局域网干扰严重。  
+7.DW1560当使用2.4Ghz Wifi进行大带宽上传时会导致蓝牙几乎断线不可用。这是双天线网卡的通病。解决方案：换用四天线网卡或使用5Gh wifi  
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/battery.png)
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bluetooth.png)
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/general.png)
