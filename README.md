@@ -1,4 +1,5 @@
-# Lenovo XiaoXin-13-Pro-Hackintosh  
+# Lenovo XiaoXin-13-Pro-Hackintosh
+[English Version 英文版本](./en_README.md)
 关键词：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`  
 **警告：安装完毕后务必更改config中的序列号和设备码（百度搜索三码修改教程），否则Apple ID永久封禁与作者无关！**
 ## 目录
@@ -10,7 +11,7 @@
 	* 完善设置
 * [参考资料](#参考资料)  
 * [问题说明](#问题说明)    
-## 个人配置  
+## 个人配置
 |规格|详细信息|
 |:-|:-|
 |型号|联想小新13Pro2020|
@@ -25,7 +26,7 @@
        4.DW1560可实现功能：随航、接力、隔空投送、Apple Watch解锁(解锁在11.4及以后失效)
        5.核显在Mac下伪装成UHD630 Mobile  
        6.经测试，我提供的OC0.6.3适配11.0.0-11.5.1内任意版本(在版本范围内可无痛升级)，其他版本可自行尝试！
-## 准备工具  
+## 准备工具
 1.配置好的EFI(适合此机型的)  
 2.BalenaEtcher-Setup（[所有工具点此下载]() 提取码: me8f）  
 3.DiskGenius  
