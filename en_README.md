@@ -1,5 +1,5 @@
 # Lenovo XiaoXin-13-Pro-Hackintosh
-[Chinese Version 中文版本](./README.md)
+[Chinese Version 中文版本](./README.md)  
 KeyWords：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`  
 **Warning: Be sure to change the serial number and device code in config.plist after installation (Google search 'three-code modification tutorial'), otherwise the permanent ban of Apple ID has nothing to do with the author!**
 ## Menu
