@@ -1,7 +1,13 @@
 # Lenovo XiaoXin-13-Pro-Hackintosh
 [English Version 英文版本](./en_README.md)  
 关键词：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`  
-**警告：安装完毕后务必更改config中的序列号和设备码（百度搜索三码修改教程），否则Apple ID永久封禁与作者无关！**
+**警告：安装完毕后务必更改config中的序列号和设备码（百度搜索三码修改教程），否则Apple ID永久封禁与作者无关！**  
+可实现效果:  
+- [x] 随行
+- [x] 隔空投送
+- [x] 蓝牙
+- [x] 接力
+- [x] AW解锁(11.4以后失效！)
 ## 目录
 * [个人配置](#个人配置)  
 * [准备工具](#准备工具) 
