@@ -1,121 +1,115 @@
 # Lenovo XiaoXin-13-Pro-Hackintosh
-[English Version 英文版本](./en_README.md)  
-关键词：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`  
-**警告：安装完毕后务必更改config中的序列号和设备码（百度搜索三码修改教程），否则Apple ID永久封禁与作者无关！**  
-可实现效果:  
-- [x] 随行
-- [x] 隔空投送
-- [x] 蓝牙
-- [x] 接力
-- [x] AW解锁(11.4以后失效！)
-## 目录
-* [个人配置](#个人配置)  
-* [准备工具](#准备工具) 
-* [操作流程](#操作流程)  
-	* 准备工作
-	* 安装系统
-	* 完善设置
-* [参考资料](#参考资料)  
-* [问题说明](#问题说明)    
-## 个人配置
-|规格|详细信息|
+[Chinese Version 中文版本](./ch_README.md)  
+KeyWords：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`  
+**Warning: Be sure to change the serial number and device code in config.plist after installation (Google search 'three-code modification tutorial'), otherwise the permanent ban of Apple ID has nothing to do with the author!**
+## Menu
+* [Configuration](#Configuration)  
+* [Tools](#Tools) 
+* [Operating procedures](#Operating-procedures)  
+	* Preprations
+	* Install the system
+	* Perfect settings
+* [Reference](#Reference)  
+* [Problem description](#Problems)    
+## Configuration
+|Specification|Info|
 |:-|:-|
-|型号|联想小新13Pro2020|
+|Model|Lenovo Xiaoxin_13Pro2020|
 |CPU|Intel i5-10210U|
-|显卡|~~MX350~~ (独显无法驱动)UHD620|
-|内存|板载16g（2666Mhz）|
-|网卡|BCM94352Z(DW1560)|
-|硬盘|西数SN730(1T)|  
-    注:1.硬盘512G自行更换为同型号1T  
-       2.原装intel AX201无法使用隔空投送、蓝牙，随航，强烈建议更换为DW1560（EFI已内置驱动完美适配）
-       3.DW1820A性价比比DW1560高但有较大可能需要屏蔽针脚且容易掉驱动（并且第二次连接同一热点大概率失败），除非经济实在拮据，否则非常不推荐！  
-       4.DW1560可实现功能：随航、接力、隔空投送、Apple Watch解锁(解锁在11.4及以后失效)
-       5.核显在Mac下伪装成UHD630 Mobile  
-       6.经测试，我提供的OC0.6.3适配11.0.0-11.5.1内任意版本(在版本范围内可无痛升级)，其他版本可自行尝试！
-## 准备工具
-1.配置好的EFI(适合此机型的)  
-2.BalenaEtcher-Setup（[所有工具点此下载]() 提取码: me8f）  
+|Graphics card|~~MX350~~ (cannot be drived)UHD620|
+|Memory|16g（2666Mhz）|
+|Network card|BCM94352Z(DW1560)|
+|Hard disk|WDC-SN730(1T)|  
+    FAO:1.Replace 512G hard disk with 1T of the same model.  
+       2.The original intel AX201 cannot be used for airdrop, Bluetooth, and onboard. It is strongly recommended to replace it with DW1560 (EFI has a built-in driver for perfect adaptation）  
+       3.DW1820A is more cost-effective than DW1560, but it may need to shield the pins and be easy to drive off (and the second connection to the same hotspot is likely to fail). Unless the economy is really tight, it is not recommended!  
+       4.DW1560 can realize the functions: Sidecar, Handoff, Airdrop, Apple Watch unlock (unlocking will be invalid in 11.4 and later)
+       5.Nuclear display disguised as UHD630 Mobile under Hackintosh.  
+       6.After testing, the OC0.6.3 I provided is compatible with any version in 11.0.0-11.5.1 (within the range of the version can be painlessly upgraded), other versions can be tried by yourself!
+## Tools
+1.Configured EFI (suitable for this model)  
+2.BalenaEtcher-Setup（[Download](https://pan.baidu.com/s/11ObMtIKhUBLLy_J3pLN_Pg) Code: me8f）  
 3.DiskGenius  
 4.EasyUEFI  
 5.InsydeH2OUVE  
-6.MacOS镜像文件（[下载](https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/)）  
+6.MacOS Mirror file（[Download](https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/)）  
 
-    以下演示使用macOS BigSur 11.0.1 20B50 正式版 with Clover 5126原版镜像[双EFI版][UEFI and MBR]，完全安装后可完美升级至11.5.1,其他镜像版本安装类似。  
-## 操作流程
-### 1.准备工作
-* 关闭bios中的安全启动，保存并退出。
+    The following demonstration uses the official version of macOS BigSur 11.0.1 20B50 with Clover 5126 original image [Dual EFI version][UEFI and MBR], which can be perfectly upgraded to 11.5.1 after complete installation. The installation of other versions is similar.  
+## Operating-procedures 
+### 1.Preprations
+* Close the safe boot in the bios, save and exit.
 
-		小新13Pro进入Bios方式：开机Fn+f2
+		Xiaoxin 13Pro enters Bios mode: press Fn+f2 when booting up.
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/secure%20boot.png?raw=true "关闭Secure Boot")  
-* 关闭驱动器Bitlocker（如打开的话）。
-* 解锁DMVT和ctglock(**至关重要**)  
+* Turn off the drive Bitlocker (if turned on).
+* Unlock DMVT and ctglock (**critical**)  
 
-		管理员身份运行InsydeH2OUVE文件夹内H2OUVE-W-GUIx64.exe, File---load runtime, 修改如下位置的参数并保存重启:
+		As an administrator, run H2OUVE-W-GUIx64.exe, File---load runtime in the InsydeH2OUVE folder, modify the parameters in the following locations and save and restart:
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bios_1.png?raw=true "鼠标指针处修改为02")
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bios_2.png?raw=true)
-* 使用BalenaEtcher刻录MacOS镜像至U盘
+* Use BalenaEtcher to burn the MacOS ISO to a USB flash drive
 
-        刻录过程中如弹出格式化则选择取消
-* 将U盘OC文件夹中的EFI文件夹删除并进行替换（内包含boot和oc两个文件夹）
+        If the format pops up during the burning process, select Cancel.
+* Delete and replace the EFI folder in the OC folder of the flash drive (including the boot and oc folders)
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/disk.png?raw=true "删除原有的EFI文件夹并完成替换")
-* ~~建立Mac分区并更改分区参数为APFS~~ (可有可无)
-* 将软件安装包放入DATAS分区
+* ~~Create a Mac partition and change the partition parameters to APFS~~ (Not neccessary)
+* Put the software installation package into the DATAS partition
 
-		其中的OCC需要用到以来配置config.list和进行其他设置
-### 2.安装系统
-* 重启，进入bios设置EFI USB Device 1为第一启动项
+		The OCC needs to be used to configure config.list and other settings
+### 2.Install the system
+* Restart, enter bios and set EFI USB Device 1 as the first boot item
 
-		其中Device为Clover引导，Device1为OC引导，Device2为PE
- * 选择Install macos
+		Among them, Device is Clover boot, Device1 is OC boot, Device2 is PE.
+ * Choose Install macos
 
-		第二次起则选择macOS Install
-* 选择磁盘工具--抹掉--APFS格式 
+		From the second time choose macOS Install
+* Select Disk Utility-Erase-APFS Format 
 
-		名称任意，建议小白按照图中的来
+		The name is arbitrary, it is recommended that Xiaobai follow the picture.
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/install.png?raw=true "抹掉磁盘并定义为APFS格式")
-* 安装macOS
-### 3.完善设置
-* 安装DATES中的软件
-* 使用OCC挂载两个分区，并将U盘中EFI文件夹内的OC文件夹拷贝至本地mac分区的EFI文件夹内, **注意！千万不能将U盘中的Boot文件夹覆盖掉mac本地的Boot！！！否则会导致windows无法被引导（引导损坏）**
+* Install macOS
+### 3.Perfect settings
+* Install the software in DATES
+* Use OCC to mount two partitions, and copy the OC folder in the EFI folder of the flash drive to the EFI folder of the local mac partition, **Attention! Never overwrite the Boot folder in the U disk to the local Boot of the mac! ! ! Otherwise, Windows cannot be booted (boot damage)**
 
-		完成后本地mac分区EFI文件夹内应有三个文件夹：Microsoft , Boot , OC  
-* （**切勿**推出U盘）重启，进入mac
-* Terminal中运行如下代码：
+		After completion, there should be three folders in the EFI folder of the local mac partition: Microsoft , Boot , OC  
+* (**Don't** eject the USB flash drive) Restart and enter the mac.
+* Run the following code in Terminal:
 
 		sudo spctl --master-disable
-		sudo kextcache -i /	  (此条运行后需稍等片刻)
-* 重启，进入PE
+		sudo kextcache -i /	  (Wait a while after this operation)
+* Restart, enter PE
 
-		开机Fn+f12，选择Device2
-		此步为修复windows启动项
-* 打开UEFI引导修复，选择ESP分区，系统根目录选择C:\\windows\\,修复并重启进入windows
+		Press Fn+f12 when booting up, choose Device2.
+		Now let's repair windows startup items
+* Open UEFI boot repair, select ESP partition, select C:\\windows\\ as the system root directory, repair and restart to enter windows
 
-		ESP分区号在DiskGeniues中查看，如ESP分区号为数字，则先在引导修复中挂载
-* easyUEFI中如图设置:
+		Check the ESP partition number in DiskGeniues. If the ESP partition number is a number, mount it in the boot repair first
+* Set as shown in easyUEFI:
 
-		目标分区选择Disk0中的最左边一个分区，描述即为开机时启动项的名称
+		Select the leftmost partition in Disk0 as the target partition, and the description is the name of the startup item at boot
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/easyUEFI.png?raw=true)
-* 调整启动项顺序
+* Adjust the order of startup items
 
-		建议将mac放到首启动项，开机默认进入mac。因为使用OC引导windows会出现一些小问题。因此要进入windows时开机Fn+f12选择win进入为纯净。
-## 参考资料
+		It is recommended to put the mac in the first startup item, and enter the mac by default. Because there will be some minor problems when using OC to boot windows. Therefore, when you want to enter windows, turn on Fn+f12 and select win to enter as pure.
+## Reference
 * 黑果小兵的部落阁：https://blog.daliansky.net/
 * DW1820A网卡黑苹果使用教程：https://blog.daliansky.net/DW1820A_BCM94350ZAE-driver-inserts-the-correct-posture.html
 * macOS BigSur安装常见问题：https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-BigSur-11.0-installation.html
 * 联想小新PRO 13 19/20 Catalina：https://blog.daliansky.net/Lenovo-Xiaoxin-PRO-13-2019-and-macOS-Catalina-Installation-Tutorial.html
 * 小新13Pro适用EFI：https://github.com/daliansky/XiaoXinPro-13-hackintosh/releases  
-	注意：有些EFI不带有1820A的网卡驱动，下载时请注意！添加1820A网卡驱动方式参考[此处](https://blog.daliansky.net/DW1820A_BCM94350ZAE-driver-inserts-the-correct-posture.html),1560参考[此处](https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html)。
+	Note: Some EFI does not have 1820A network card driver, please pay attention when downloading! Add 1820A network card driver method reference [here](https://blog.daliansky.net/DW1820A_BCM94350ZAE-driver-inserts-the-correct-posture.html), 1560 reference[here](https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html).
 
-	  提供的EFI中已包含1820A和1560通用网卡驱动。此处纠正一个误区，1820A和1560并非免驱，而是现在部分EFI中（小新的绝大多数）已经包含了网卡和蓝牙驱动。
-* B站视频：https://www.bilibili.com/video/BV1ca4y1j7bN
-## 问题说明
-1.该EFI的OC版本（0.63）目前无法解决内置MIC无法使用的问题。  
-2.触摸板偶尔失灵或触摸反馈间断。  
-3.DW1820A对于连接iPhone热点存在同一设备名称仅能连接一次的bug。  
-4.强烈建议更改三码并关闭“查找此Mac”。  
-5.若无法登陆AppleID和AppStore，尝试第四步后更改DNS为114.114.114.114和8.8.8.8。  
-6.DW1820A的4.1Ghz蓝牙和2.4Ghz无线局域网干扰严重。  
-7.DW1560当使用2.4Ghz Wifi进行大带宽上传时会导致蓝牙几乎断线不可用。这是双天线网卡的通病。解决方案：换用四天线网卡或使用5Gh wifi  
+	  The provided EFI has included 1820A and 1560 universal network card drivers. To correct a misunderstanding here, 1820A and 1560 are not driver-free, but now part of the EFI (the vast majority of Xiaoxin) already contains the network card and Bluetooth driver.
+* Video：https://www.bilibili.com/video/BV1ca4y1j7bN
+## Problems
+1. The OC version (0.63) of this EFI cannot currently solve the problem that the built-in MIC cannot be used.
+2. The touchpad occasionally fails or the touch feedback is interrupted.
+3. DW1820A has a bug that the same device name can only be connected once to the iPhone hotspot.
+4. It is strongly recommended to change the three codes and turn off "Find this Mac".
+5. If you cannot log in to AppleID and AppStore, try to change the DNS to 114.114.114.114 and 8.8.8.8 after the fourth step.
+6. The 4.1Ghz Bluetooth and 2.4Ghz wireless LAN of DW1820A have serious interference.
+7. When DW1560 uses 2.4Ghz Wifi for large bandwidth upload, it will cause Bluetooth to be almost disconnected and unavailable. This is a common problem with dual antenna network cards. Solution: switch to a four-antenna network card or use 5Gh wifi  
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/battery.png)
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/bluetooth.png)
 ![](https://github.com/xzajyjs/XiaoXin13Pro-Hackintosh/blob/main/png/general.png)
