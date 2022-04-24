@@ -23,9 +23,9 @@ KeyWords：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`
     FAO:1.Replace 512G hard disk with 1T of the same model.  
        2.The original intel AX201 cannot be used for airdrop, Bluetooth, and onboard. It is strongly recommended to replace it with DW1560 (EFI has a built-in driver for perfect adaptation）  
        3.DW1820A is more cost-effective than DW1560, but it may need to shield the pins and be easy to drive off (and the second connection to the same hotspot is likely to fail). Unless the economy is really tight, it is not recommended!  
-       4.DW1560 can realize the functions: Sidecar, Handoff, Airdrop, Apple Watch unlock (unlocking will be invalid in 11.4 and later)
+       4.DW1560 can realize the functions: Sidecar, Handoff, Airdrop, Apple Watch unlock
        5.Nuclear display disguised as UHD630 Mobile under Hackintosh.  
-       6.After testing, the OC0.6.3 I provided is compatible with any version in 11.0.0-11.5.1 (within the range of the version can be painlessly upgraded), other versions can be tried by yourself!
+       6.After testing, the OC0.6.3 I provided is compatible with any version in 11.0.0-11.6.5 (within the range of the version can be painlessly upgraded), other versions can be tried by yourself!
 ## Tools
 1.Configured EFI (suitable for this model)  
 2.BalenaEtcher-Setup（[Download](https://pan.baidu.com/s/11ObMtIKhUBLLy_J3pLN_Pg) Code: me8f）  
@@ -34,7 +34,7 @@ KeyWords：`Hackintosh` `XiaoXin` `EFI` `Tutorial` `Lenovo`
 5.InsydeH2OUVE  
 6.MacOS Mirror file（[Download](https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/)）  
 
-    The following demonstration uses the official version of macOS BigSur 11.0.1 20B50 with Clover 5126 original image [Dual EFI version][UEFI and MBR], which can be perfectly upgraded to 11.5.1 after complete installation. The installation of other versions is similar.  
+    The following demonstration uses the official version of macOS Big Sur 11.0.1 20B50 with Clover 5126 original image [Dual EFI version][UEFI and MBR], which can be perfectly upgraded to 11.6.5 after complete installation. The installation of other versions is similar.  
 ## Operating-procedures 
 ### 1.Preprations
 * Close the safe boot in the bios, save and exit.
